@@ -1,3 +1,7 @@
+# Main AI2021 training data
+mnist_png/testing/
+mnist_png/training/
+
 # Logs
 logs
 *.log
