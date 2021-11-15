@@ -1,22 +1,17 @@
 const fs = require('fs');
-
-let ones = [];
-let twos = [];
-let threes = [];
-let fours = [];
-let fives = [];
-let sixes = [];
-let sevens = [];
-let eights = [];
-let nines = [];
-let tens = [];
+let numbers = [9];
 
 function preload(){
-    
+    let files = [9];
+    for(i = 0; i < 10; i++)
+    {
+        files[i] = fs.readdirSync(`./training_data/${i}`);
+        for(const file of files[i]){
+            // Load the file here
+            // numbers[i] = loadImage
+        }
+    }    
 }
 
-const files = fs.readdirSync(`./mnist_png/training/9`);
-
-for(const file of files){
-    console.log(file);
-}
+files.forEach(file => console.log(file.length));
+console.log(files[0][5000]);
