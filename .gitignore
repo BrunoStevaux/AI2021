@@ -2,6 +2,9 @@
 mnist_png/testing/
 mnist_png/training/
 
+# VS Code project files
+.vscode/
+
 # Logs
 logs
 *.log
