@@ -2,6 +2,9 @@
 mnist_png/testing/
 mnist_png/training/
 
+# Mac
+.DS_Store
+
 # VS Code project files
 .vscode/
 
