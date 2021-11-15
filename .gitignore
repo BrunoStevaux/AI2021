@@ -1,6 +1,6 @@
 # Main AI2021 training data
-mnist_png/testing/
-mnist_png/training/
+training_data/
+testing_data/
 
 # Mac
 .DS_Store

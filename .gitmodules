@@ -1,3 +1,4 @@
 [submodule "mnist_png"]
 	path = mnist_png
 	url = https://github.com/myleott/mnist_png.git
+	ignore = all
