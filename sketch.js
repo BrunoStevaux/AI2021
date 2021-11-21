@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 let numbers = [9];
 let images = [9];
 
