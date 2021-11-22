@@ -6,7 +6,8 @@ function preload() {
     for (i = 0; i < 10; i++) {
         images[i] = [];
         // The upper bound on j must change to load more data from each digit
-        for (j = 0; j < 10; j++) {
+        for (j = 0; j < 100; j++) {
+            console.log(`Loading ${i} image ${j}`);
             images[i][j] = loadImage(`./training_data/${i}-${j}.png`);
         }
     }
@@ -15,6 +16,8 @@ function preload() {
 let classifier;
 
 function setup() {
+    console.log(images[0].length);
+
     let options = {
         inputs: [28, 28, 4],
         task: 'imageClassification',
