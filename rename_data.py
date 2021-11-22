@@ -8,6 +8,7 @@ import os
 
 # Iterate over digits
 for i in range(0, 10):
+    print(f'Renaming: {i}')
     cpath = "training_data/" + str(i) + "/"
     files = [f for f in os.listdir(cpath) if os.path.isfile(os.path.join(cpath, f))]
     # Iterate over images of each digit
