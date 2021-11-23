@@ -7,6 +7,7 @@ let clearButton;
 function setup() {
     // Create canvas
     canvas = createCanvas(400, 400);
+    stroke(255);
 
     // Initialize model to load into
     let options = {
@@ -21,10 +22,10 @@ function setup() {
     };
 
     // Create buttons
-    background(255);
+    background(0);
     clearButton = createButton('clear');
     clearButton.mousePressed(function() {
-        background(255);
+        background(0);
     });
     resultsDiv = createDiv('loading model');
     inputImage = createGraphics(28, 28);
@@ -61,7 +62,7 @@ function gotResults(err, results) {
 
 function draw() {
     if (mouseIsPressed) {
-        strokeWeight(8);
+        strokeWeight(30);
         line(mouseX, mouseY, pmouseX, pmouseY);
     }
 }

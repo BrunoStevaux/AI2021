@@ -6,7 +6,7 @@ function preload() {
     for (i = 0; i < 10; i++) {  
         images[i] = [];
         // The upper bound on j must change to load more data from each digit
-        for (j = 0; j < 100; j++) {
+        for (j = 0; j < counts[i] / 4; j++) {
             console.log(`Loading ${i} image ${j}`);
             images[i][j] = loadImage(`./training_data/${i}-${j}.png`);
         }
@@ -28,11 +28,11 @@ function setup() {
     for (let i = 0; i < 10; i++) {
         for (let j = 0; j < images[i].length; j++) {
             console.log(`Adding ${i} image ${j}`);
-            classifier.addData({ image: images[i][j] }, { label: i });
+            classifier.addData({ image: images[i][j] }, { label: `${i}` });
         }
     }
     classifier.normalizeData();
-    classifier.train({ epochs: 50 }, finishedTraining);
+    classifier.train({ epochs: 100 }, finishedTraining);
 }
 
 function finishedTraining() {
