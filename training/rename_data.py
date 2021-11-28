@@ -9,7 +9,7 @@ import os
 # Iterate over digits
 for i in range(0, 10):
     print(f'Renaming: {i}')
-    cpath = "training_data/" + str(i) + "/"
+    cpath = "testing_data/" + str(i) + "/"
     files = [f for f in os.listdir(cpath) if os.path.isfile(os.path.join(cpath, f))]
     # Iterate over images of each digit
     k = 0
@@ -17,6 +17,6 @@ for i in range(0, 10):
         # Rename 
         newname = cpath + str(i) + "-" + str(k) + ".png"
         os.rename(cpath + file, newname)
-        os.replace(newname, "training_data/" + str(i) + "-" + str(k) + ".png")
+        os.replace(newname, "testing_data/" + str(i) + "-" + str(k) + ".png")
         k += 1
     os.rmdir(cpath)
