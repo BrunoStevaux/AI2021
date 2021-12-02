@@ -1,3 +1,9 @@
+/*
+ * This source code is a modified version of Daniel Shiffman's
+ * in the relevant Coding Train project.
+ * https://github.com/CodingTrain/website/tree/main/CodingChallenges/CC_158_Shape_Classifier
+ */
+
 let classifier;
 let canvas;
 let resultsDiv;
