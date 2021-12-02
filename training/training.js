@@ -34,7 +34,7 @@ function setup() {
         }
     }
 
-    classifier.normalizeData();
+    // classifier.normalizeData();
     classifier.train({ epochs: 100 }, finishedTraining);
 }
 
